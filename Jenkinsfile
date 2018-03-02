@@ -13,4 +13,7 @@ pipeline {
       }
     }
   }
+  environment {
+    python = '$PYTHON_ENVS'
+  }
 }
