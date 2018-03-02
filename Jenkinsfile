@@ -3,8 +3,17 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        sh '$python --version'
-        sh 'env'
+        parallel(
+          "Install": {
+            sh '$python --version'
+            sh 'env'
+            
+          },
+          "foo": {
+            sh 'echo 123'
+            
+          }
+        )
       }
     }
   }
