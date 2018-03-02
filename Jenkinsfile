@@ -12,6 +12,8 @@ pipeline {
         catchError() {
           sh '$python -m pytest --junitxml results.xml test'
         }
+        
+        junit 'results.xml'
       }
     }
   }
