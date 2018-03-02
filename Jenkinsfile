@@ -9,10 +9,8 @@ pipeline {
     }
     stage('Test') {
       steps {
-        step {
-          catchError() {
-            sh '$python -m pytest --junitxml results.xml test'
-          }
+        catchError() {
+          sh '$python -m pytest --junitxml results.xml test'
         }
       }
     }
