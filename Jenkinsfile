@@ -9,6 +9,6 @@ pipeline {
     }
   }
   environment {
-    python = "$PYTHON_ENVS"
+    python = "$PYTHON_ENVS/test/bin/python"
   }
 }
