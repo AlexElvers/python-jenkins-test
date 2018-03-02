@@ -9,6 +9,7 @@ pipeline {
     stage('Install') {
       steps {
         sh 'python --version'
+        sh 'env'
       }
     }
   }
