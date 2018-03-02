@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        sh 'echo 123'
+        checkout scm
       }
     }
     stage('Install') {
